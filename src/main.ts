@@ -12,7 +12,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get(ConfigService);
   app.enableCors({
-    origin: configService.get<string>('FRONT_URL'),
+    // origin: configService.get<string>('FRONT_URL'),
+    origin: 'https://dev-flow-woad.vercel.app',
     credentials: true,
 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
