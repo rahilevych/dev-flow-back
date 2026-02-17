@@ -10,6 +10,7 @@ import { TokensModule } from './tokens/tokens.module';
 import { WorkspacesModule } from './workspaces/workspaces.module';
 import { MembersModule } from './members/members.module';
 import { ProjectsModule } from './projects/projects.module';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ProjectsModule } from './projects/projects.module';
     WorkspacesModule,
     MembersModule,
     ProjectsModule,
+    TasksModule,
   ],
   controllers: [AppController],
   providers: [AppService, DatabaseService],
