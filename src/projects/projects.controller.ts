@@ -56,7 +56,6 @@ export class ProjectsController {
   @Get(':projectId')
   @Roles(MemberRole.OWNER, MemberRole.ADMIN, MemberRole.MEMBER)
   @ApiOperation({ summary: 'Get a specific project by ID' })
-  @ApiParam({ name: 'workspaceId', description: 'ID of the workspace' })
   @ApiParam({ name: 'projectId', description: 'ID of the project' })
   async getProject(@Param('projectId') projectId: string) {
     return await this.projectsService.get(projectId);
